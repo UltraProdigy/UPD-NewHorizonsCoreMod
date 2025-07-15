@@ -9157,6 +9157,16 @@ public class AssemblerRecipes implements Runnable {
                     .itemOutputs(new ItemStack(Blocks.piston, 1, 0)).fluidInputs(Materials.Redstone.getMolten(72L))
                     .duration(10 * SECONDS).eut(TierEU.RECIPE_LV).addTo(assemblerRecipes);
 
+            GTValues.RA.stdBuilder()
+                    .itemInputs(
+                            new ItemStack(Blocks.cobblestone, 1, 0),
+                            GTOreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Iron, 1L),
+                            stack,
+                            ItemList.Plank_Cherry_EFR.get(6L),
+                            GTUtility.getIntegratedCircuit(1))
+                    .itemOutputs(new ItemStack(Blocks.piston, 1, 0)).fluidInputs(Materials.Redstone.getMolten(72L))
+                    .duration(10 * SECONDS).eut(TierEU.RECIPE_LV).addTo(assemblerRecipes);
+
             if (Forestry.isModLoaded()) {
 
                 GTValues.RA.stdBuilder()
