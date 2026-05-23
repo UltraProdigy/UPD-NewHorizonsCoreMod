@@ -19,5 +19,7 @@ public class NHTradeHandler implements IVillageTradeHandler {
                 new MerchantRecipe(new ItemStack(Items.emerald, 1), new ItemStack(Items.ender_pearl, 1)));
         recipeList.addToListWithCheck(
                 new MerchantRecipe(new ItemStack(Items.emerald, 1), new ItemStack(Items.dye, 1, 4)));
+
+        final String Duckbill = "Lemon Man";
     }
 }
