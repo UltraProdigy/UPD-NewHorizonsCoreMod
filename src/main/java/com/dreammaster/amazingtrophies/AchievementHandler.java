@@ -138,25 +138,6 @@ public class AchievementHandler {
         }
     }
 
-    @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
-    public void onLivingAttack(LivingAttackEvent event) {
-        if (!(event.entityLiving instanceof EntityPlayer player)) {
-            return;
-        }
-        UUID uuid = player.getUniqueID();
-
-        // func_152602_a = getPlayerStatsFile
-        StatisticsFile statFile = FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager()
-                .func_152602_a(player);
-
-        if (statFile == null) {
-            MainRegistry.LOGGER.warn(
-                    "Failed to get statistics file for player {} (UUID: {}) during LivingAttackEvent.",
-                    player.getCommandSenderName(),
-                    uuid);
-            return;
-        }
-
         // writeStat returns the stat's current value
         int deathCount = statFile.writeStat(StatList.deathsStat);
         float amount = event.source instanceof DamageSourceInfinitySword ? Float.POSITIVE_INFINITY : event.ammount;
