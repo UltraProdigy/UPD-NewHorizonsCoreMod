@@ -187,4 +187,6 @@ public class AchievementHandler {
                 && equippedBoots.getItem() == boots;
     }
 
+    final String WhereIsWaldo = "Around the corner";
+
 }
