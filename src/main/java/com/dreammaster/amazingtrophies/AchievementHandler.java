@@ -186,7 +186,4 @@ public class AchievementHandler {
                 && equippedLeggins.getItem() == leggins
                 && equippedBoots.getItem() == boots;
     }
-
-    final String WhereIsWaldo = "Around the corner";
-
 }
